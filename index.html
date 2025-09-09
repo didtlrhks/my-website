@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헬스케어 스토어 - 디지털 건강 솔루션</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>헬스케어 스토어</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">홈</a></li>
+                    <li><a href="#products">제품</a></li>
+                    <li><a href="#about">소개</a></li>
+                    <li><a href="#contact">문의</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <button class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 메인 히어로 섹션 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>디지털 헬스케어의 새로운 시작</h1>
+            <p>과학적으로 검증된 건기식으로 건강한 삶을 시작하세요</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">제품 둘러보기</button>
+                <button class="btn btn-secondary">건강 상담</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="health-icons">
+                <i class="fas fa-pills"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-leaf"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 제품 카테고리 -->
+    <section class="categories">
+        <div class="container">
+            <h2>제품 카테고리</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="vitamins">
+                    <i class="fas fa-capsules"></i>
+                    <h3>비타민 & 미네랄</h3>
+                    <p>필수 영양소로 건강한 몸 만들기</p>
+                </div>
+                <div class="category-card" data-category="protein">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>단백질 & 운동</h3>
+                    <p>근육 성장과 회복을 위한 단백질</p>
+                </div>
+                <div class="category-card" data-category="omega">
+                    <i class="fas fa-fish"></i>
+                    <h3>오메가 & 오일</h3>
+                    <p>뇌 건강과 심혈관 건강</p>
+                </div>
+                <div class="category-card" data-category="herbal">
+                    <i class="fas fa-seedling"></i>
+                    <h3>한방 & 허브</h3>
+                    <p>전통 한방의 지혜를 현대적으로</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 제품 섹션 -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>인기 제품</h2>
+                <div class="product-filters">
+                    <button class="filter-btn active" data-filter="all">전체</button>
+                    <button class="filter-btn" data-filter="vitamins">비타민</button>
+                    <button class="filter-btn" data-filter="protein">단백질</button>
+                    <button class="filter-btn" data-filter="omega">오메가</button>
+                    <button class="filter-btn" data-filter="herbal">한방</button>
+                </div>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- 제품들이 JavaScript로 동적으로 추가됩니다 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 특징 섹션 -->
+    <section class="features">
+        <div class="container">
+            <h2>왜 우리를 선택해야 할까요?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>과학적 검증</h3>
+                    <p>모든 제품은 엄격한 과학적 검증을 거쳐 제조됩니다</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>빠른 배송</h3>
+                    <p>전국 어디든 24시간 내 빠른 배송 서비스</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>전문 상담</h3>
+                    <p>영양사와 건강 전문가의 1:1 맞춤 상담</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>품질 보장</h3>
+                    <p>GMP 인증 시설에서 제조된 고품질 제품</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 소개 섹션 -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>디지털 헬스케어의 미래</h2>
+                    <p>우리는 단순한 건기식 판매를 넘어서, 개인의 건강 데이터를 분석하여 맞춤형 영양 솔루션을 제공합니다. AI 기반 건강 분석과 과학적 근거에 기반한 제품 추천으로 더 건강한 삶을 지원합니다.</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check"></i> 개인 맞춤형 영양 솔루션</li>
+                        <li><i class="fas fa-check"></i> AI 기반 건강 분석</li>
+                        <li><i class="fas fa-check"></i> 실시간 건강 모니터링</li>
+                        <li><i class="fas fa-check"></i> 전문가 상담 서비스</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="health-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10,000+</span>
+                            <span class="stat-label">만족 고객</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">제품 종류</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99%</span>
+                            <span class="stat-label">고객 만족도</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 문의 섹션 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>문의하기</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>전화 문의</h3>
+                            <p>1588-0000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>이메일</h3>
+                            <p>info@healthcarestore.co.kr</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>운영 시간</h3>
+                            <p>평일 09:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="이름" required>
+                    <input type="email" placeholder="이메일" required>
+                    <input type="tel" placeholder="전화번호">
+                    <textarea placeholder="문의 내용" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">문의하기</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>헬스케어 스토어</span>
+                    </div>
+                    <p>디지털 헬스케어의 새로운 패러다임을 제시합니다</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-kakaotalk"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>제품</h3>
+                    <ul>
+                        <li><a href="#">비타민 & 미네랄</a></li>
+                        <li><a href="#">단백질 & 운동</a></li>
+                        <li><a href="#">오메가 & 오일</a></li>
+                        <li><a href="#">한방 & 허브</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>고객 서비스</h3>
+                    <ul>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">배송 안내</a></li>
+                        <li><a href="#">교환 & 반품</a></li>
+                        <li><a href="#">건강 상담</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>회사 정보</h3>
+                    <ul>
+                        <li><a href="#">회사 소개</a></li>
+                        <li><a href="#">채용 정보</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 헬스케어 스토어. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 장바구니 모달 -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>장바구니</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems"></div>
+                <div class="cart-total">
+                    <h3>총 금액: <span id="cartTotal">0</span>원</h3>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeCart()">계속 쇼핑</button>
+                <button class="btn btn-primary">주문하기</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
