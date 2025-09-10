@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>헬스케어 스토어 - 디지털 건강 솔루션</title>
+    <title>당신이 원하는 몸으로 - 닥터코치</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -15,21 +15,18 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <i class="fas fa-heartbeat"></i>
-                    <span>헬스케어 스토어</span>
+                    <i class="fas fa-user-md"></i>
+                    <span>닥터코치</span>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home">홈</a></li>
+                    <li><a href="#how-it-works">어떻게?</a></li>
                     <li><a href="#products">제품</a></li>
-                    <li><a href="#about">소개</a></li>
-                    <li><a href="#contact">문의</a></li>
+                    <li><a href="#reviews">리뷰</a></li>
+                    <li><a href="#download">다운로드</a></li>
                 </ul>
                 <div class="nav-actions">
-                    <button class="search-btn"><i class="fas fa-search"></i></button>
-                    <button class="cart-btn">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
-                    </button>
+                    <button class="btn btn-primary">지금 시작하기</button>
                     <button class="mobile-menu-btn">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -41,46 +38,106 @@
     <!-- 메인 히어로 섹션 -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>디지털 헬스케어의 새로운 시작</h1>
-            <p>과학적으로 검증된 건기식으로 건강한 삶을 시작하세요</p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary">제품 둘러보기</button>
-                <button class="btn btn-secondary">건강 상담</button>
+            <div class="hero-text">
+                <h1>당신이 원하는 몸으로<br><span class="highlight">당신을 바꿔드립니다</span></h1>
+                <p class="hero-subtitle">서울대 가정의학과 전문의가 만든 제품 + AI 피드백 + 전문 코치</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10,000+</span>
+                        <span class="stat-label">성공 사례</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">만족도</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">30일</span>
+                        <span class="stat-label">첫 변화</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large">무료 상담 받기</button>
+                    <button class="btn btn-secondary btn-large">어떻게 작동하나요?</button>
+                </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <div class="health-icons">
-                <i class="fas fa-pills"></i>
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-leaf"></i>
+            <div class="hero-image">
+                <div class="transformation-visual">
+                    <div class="before-after">
+                        <div class="before">
+                            <div class="person-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <span>Before</span>
+                        </div>
+                        <div class="arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="after">
+                            <div class="person-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <span>After</span>
+                        </div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="floating-item item-1">
+                            <i class="fas fa-pills"></i>
+                            <span>전문의 제품</span>
+                        </div>
+                        <div class="floating-item item-2">
+                            <i class="fas fa-robot"></i>
+                            <span>AI 피드백</span>
+                        </div>
+                        <div class="floating-item item-3">
+                            <i class="fas fa-user-md"></i>
+                            <span>전문 코치</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 제품 카테고리 -->
-    <section class="categories">
+    <!-- 어떻게 작동하나요? 섹션 -->
+    <section id="how-it-works" class="how-it-works">
         <div class="container">
-            <h2>제품 카테고리</h2>
-            <div class="category-grid">
-                <div class="category-card" data-category="vitamins">
-                    <i class="fas fa-capsules"></i>
-                    <h3>비타민 & 미네랄</h3>
-                    <p>필수 영양소로 건강한 몸 만들기</p>
+            <h2>어떻게 당신을 바꿔줄까요?</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>서울대 가정의학과 전문의 제품</h3>
+                        <p>의학적 근거에 기반한 검증된 제품으로<br>안전하고 효과적인 변화를 시작하세요</p>
+                        <div class="step-features">
+                            <span class="feature-tag">의학적 검증</span>
+                            <span class="feature-tag">안전성 보장</span>
+                            <span class="feature-tag">효과 입증</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="category-card" data-category="protein">
-                    <i class="fas fa-dumbbell"></i>
-                    <h3>단백질 & 운동</h3>
-                    <p>근육 성장과 회복을 위한 단백질</p>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>AI 실시간 피드백</h3>
+                        <p>당신의 변화를 실시간으로 분석하고<br>개인 맞춤형 조언을 제공합니다</p>
+                        <div class="step-features">
+                            <span class="feature-tag">실시간 분석</span>
+                            <span class="feature-tag">개인 맞춤</span>
+                            <span class="feature-tag">24시간 모니터링</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="category-card" data-category="omega">
-                    <i class="fas fa-fish"></i>
-                    <h3>오메가 & 오일</h3>
-                    <p>뇌 건강과 심혈관 건강</p>
-                </div>
-                <div class="category-card" data-category="herbal">
-                    <i class="fas fa-seedling"></i>
-                    <h3>한방 & 허브</h3>
-                    <p>전통 한방의 지혜를 현대적으로</p>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>전문 코치 피드백</h3>
+                        <p>경험 많은 전문 코치가<br>당신의 여정을 함께합니다</p>
+                        <div class="step-features">
+                            <span class="feature-tag">1:1 상담</span>
+                            <span class="feature-tag">전문 지식</span>
+                            <span class="feature-tag">지속적 지원</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,120 +146,298 @@
     <!-- 제품 섹션 -->
     <section id="products" class="products">
         <div class="container">
-            <div class="section-header">
-                <h2>인기 제품</h2>
-                <div class="product-filters">
-                    <button class="filter-btn active" data-filter="all">전체</button>
-                    <button class="filter-btn" data-filter="vitamins">비타민</button>
-                    <button class="filter-btn" data-filter="protein">단백질</button>
-                    <button class="filter-btn" data-filter="omega">오메가</button>
-                    <button class="filter-btn" data-filter="herbal">한방</button>
+            <h2>서울대 가정의학과 전문의가 만든 제품</h2>
+            <p class="section-subtitle">의학적 근거와 과학적 검증을 거친 프리미엄 제품</p>
+            
+            <div class="product-showcase">
+                <div class="product-card featured">
+                    <div class="product-badge">베스트셀러</div>
+                    <div class="product-image">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>슬림라이트</h3>
+                        <p class="product-description">자연 성분으로 건강한 다이어트를 지원하는 프리미엄 제품</p>
+                        <div class="product-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-check"></i>
+                                <span>서울대 가정의학과 검증</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-check"></i>
+                                <span>자연 성분 100%</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-check"></i>
+                                <span>부작용 없음</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">75,000원</span>
+                            <span class="sale-price">45,000원</span>
+                            <span class="discount">40% 할인</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="goToProduct('slimlight')">제품 사러가기</button>
+                    </div>
                 </div>
-            </div>
-            <div class="product-grid" id="productGrid">
-                <!-- 제품들이 JavaScript로 동적으로 추가됩니다 -->
+
+                <div class="product-card featured">
+                    <div class="product-badge">신제품</div>
+                    <div class="product-image">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>골드프로테이크</h3>
+                        <p class="product-description">프리미엄 단백질로 근육 성장과 체중 관리를 동시에</p>
+                        <div class="product-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-check"></i>
+                                <span>고품질 단백질</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-check"></i>
+                                <span>근육 성장 지원</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-check"></i>
+                                <span>체중 관리 효과</span>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">98,000원</span>
+                            <span class="sale-price">49,000원</span>
+                            <span class="discount">50% 할인</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="goToProduct('goldproteak')">제품 사러가기</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 특징 섹션 -->
-    <section class="features">
+    <!-- 닥터코치 프로그램 섹션 -->
+    <section class="doctor-coach">
         <div class="container">
-            <h2>왜 우리를 선택해야 할까요?</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-certificate"></i>
-                    <h3>과학적 검증</h3>
-                    <p>모든 제품은 엄격한 과학적 검증을 거쳐 제조됩니다</p>
+            <div class="program-content">
+                <div class="program-text">
+                    <h2>닥터코치 프로그램</h2>
+                    <h3>당신만의 전문 코치를 만나보세요</h3>
+                    <p>서울대 가정의학과 전문의와 함께 개발한 AI 기반 개인 맞춤형 코칭 프로그램입니다. 당신의 목표와 현재 상태를 분석하여 최적의 계획을 세워드립니다.</p>
+                    
+                    <div class="program-features">
+                        <div class="feature">
+                            <i class="fas fa-brain"></i>
+                            <div>
+                                <h4>AI 개인 분석</h4>
+                                <p>당신의 데이터를 분석하여 맞춤형 솔루션 제공</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <h4>실시간 모니터링</h4>
+                                <p>변화 과정을 실시간으로 추적하고 조정</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>전문 코치 지원</h4>
+                                <p>경험 많은 코치가 1:1로 상담해드립니다</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-shipping-fast"></i>
-                    <h3>빠른 배송</h3>
-                    <p>전국 어디든 24시간 내 빠른 배송 서비스</p>
+                <div class="program-visual">
+                    <div class="app-preview">
+                        <div class="phone-mockup">
+                            <div class="screen">
+                                <div class="app-header">
+                                    <h4>닥터코치</h4>
+                                    <span class="status">실시간 모니터링</span>
+                                </div>
+                                <div class="app-content">
+                                    <div class="progress-circle">
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="app-stats">
+                                        <div class="stat">
+                                            <span class="label">목표까지</span>
+                                            <span class="value">-5kg</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="label">진행률</span>
+                                            <span class="value">75%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-user-md"></i>
-                    <h3>전문 상담</h3>
-                    <p>영양사와 건강 전문가의 1:1 맞춤 상담</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 리뷰 섹션 -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2>성공한 사람들의 이야기</h2>
+            <p class="section-subtitle">이미 10,000명이 이상의 몸으로 변화했습니다</p>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%233498db'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-family='Arial'%3E김%3C/text%3E%3C/svg%3E" alt="김○○">
+                        </div>
+                        <div class="reviewer-details">
+                            <h4>김○○님</h4>
+                            <span class="age">30대 직장인</span>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"3개월 만에 15kg 감량에 성공했습니다! 서울대 전문의 제품이라 믿고 시작했는데 정말 효과가 좋았어요. AI 피드백도 정확하고 코치님도 정말 도움이 되었습니다."</p>
+                    </div>
+                    <div class="review-meta">
+                        <span class="product">슬림라이트 + 닥터코치</span>
+                        <span class="result">-15kg 감량</span>
+                    </div>
                 </div>
-                <div class="feature-card">
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23e74c3c'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-family='Arial'%3E이%3C/text%3E%3C/svg%3E" alt="이○○">
+                        </div>
+                        <div class="reviewer-details">
+                            <h4>이○○님</h4>
+                            <span class="age">20대 대학생</span>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"골드프로테이크로 근육량이 늘어나면서 체지방도 줄었어요! AI가 매일 운동과 식단을 조절해주니까 정말 편했고, 코치님의 조언도 정말 도움이 되었습니다."</p>
+                    </div>
+                    <div class="review-meta">
+                        <span class="product">골드프로테이크 + 닥터코치</span>
+                        <span class="result">근육량 +3kg, 체지방 -8%</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2327ae60'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-family='Arial'%3E박%3C/text%3E%3C/svg%3E" alt="박○○">
+                        </div>
+                        <div class="reviewer-details">
+                            <h4>박○○님</h4>
+                            <span class="age">40대 주부</span>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>"아이들 키우느라 자신을 돌볼 시간이 없었는데, 닥터코치 덕분에 6개월 만에 완전히 다른 사람이 되었어요. 이제 자신감이 생겼고 건강도 많이 좋아졌습니다!"</p>
+                    </div>
+                    <div class="review-meta">
+                        <span class="product">슬림라이트 + 골드프로테이크</span>
+                        <span class="result">-12kg 감량, 건강 개선</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 다운로드 섹션 -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <div class="download-text">
+                    <h2>지금 바로 시작하세요</h2>
+                    <h3>닥터코치 앱을 다운로드하고<br>당신의 변화를 시작하세요</h3>
+                    <p>무료로 시작할 수 있습니다. 서울대 가정의학과 전문의가 만든 제품과 AI 피드백, 전문 코치의 도움을 받아 당신이 원하는 몸으로 변화해보세요.</p>
+                    
+                    <div class="download-buttons">
+                        <a href="#" class="download-btn">
+                            <i class="fab fa-apple"></i>
+                            <div>
+                                <span>App Store에서 다운로드</span>
+                                <small>iOS 12.0 이상</small>
+                            </div>
+                        </a>
+                        <a href="#" class="download-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div>
+                                <span>Google Play에서 다운로드</span>
+                                <small>Android 6.0 이상</small>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="download-features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% 안전</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-gift"></i>
+                            <span>무료 시작</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <span>24시간 지원</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="download-visual">
+                    <div class="phone-showcase">
+                        <div class="phone phone-1">
+                            <div class="screen">
+                                <div class="app-screen">
+                                    <div class="header">닥터코치</div>
+                                    <div class="content">
+                                        <div class="chart"></div>
+                                        <div class="stats">
+                                            <div class="stat">목표: -10kg</div>
+                                            <div class="stat">진행: -7kg</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone phone-2">
+                            <div class="screen">
+                                <div class="app-screen">
+                                    <div class="header">AI 피드백</div>
+                                    <div class="content">
+                                        <div class="ai-message">
+                                            <p>오늘의 운동을 완료하셨네요! 잘하셨습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 섹션 -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>당신의 변화는 지금 시작됩니다</h2>
+                <p>서울대 가정의학과 전문의 + AI + 전문 코치가 함께합니다</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large">무료 상담 받기</button>
+                    <button class="btn btn-secondary btn-large">제품 둘러보기</button>
+                </div>
+                <div class="cta-guarantee">
                     <i class="fas fa-shield-alt"></i>
-                    <h3>품질 보장</h3>
-                    <p>GMP 인증 시설에서 제조된 고품질 제품</p>
+                    <span>30일 만족하지 않으면 100% 환불 보장</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 소개 섹션 -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>디지털 헬스케어의 미래</h2>
-                    <p>우리는 단순한 건기식 판매를 넘어서, 개인의 건강 데이터를 분석하여 맞춤형 영양 솔루션을 제공합니다. AI 기반 건강 분석과 과학적 근거에 기반한 제품 추천으로 더 건강한 삶을 지원합니다.</p>
-                    <ul class="about-features">
-                        <li><i class="fas fa-check"></i> 개인 맞춤형 영양 솔루션</li>
-                        <li><i class="fas fa-check"></i> AI 기반 건강 분석</li>
-                        <li><i class="fas fa-check"></i> 실시간 건강 모니터링</li>
-                        <li><i class="fas fa-check"></i> 전문가 상담 서비스</li>
-                    </ul>
-                </div>
-                <div class="about-image">
-                    <div class="health-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">10,000+</span>
-                            <span class="stat-label">만족 고객</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">제품 종류</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">99%</span>
-                            <span class="stat-label">고객 만족도</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 문의 섹션 -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>문의하기</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>전화 문의</h3>
-                            <p>1588-0000</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>이메일</h3>
-                            <p>info@healthcarestore.co.kr</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>운영 시간</h3>
-                            <p>평일 09:00 - 18:00</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="이름" required>
-                    <input type="email" placeholder="이메일" required>
-                    <input type="tel" placeholder="전화번호">
-                    <textarea placeholder="문의 내용" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-primary">문의하기</button>
-                </form>
             </div>
         </div>
     </section>
@@ -213,10 +448,10 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <i class="fas fa-heartbeat"></i>
-                        <span>헬스케어 스토어</span>
+                        <i class="fas fa-user-md"></i>
+                        <span>닥터코치</span>
                     </div>
-                    <p>디지털 헬스케어의 새로운 패러다임을 제시합니다</p>
+                    <p>당신이 원하는 몸으로 당신을 바꿔드립니다</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -227,56 +462,33 @@
                 <div class="footer-section">
                     <h3>제품</h3>
                     <ul>
-                        <li><a href="#">비타민 & 미네랄</a></li>
-                        <li><a href="#">단백질 & 운동</a></li>
-                        <li><a href="#">오메가 & 오일</a></li>
-                        <li><a href="#">한방 & 허브</a></li>
+                        <li><a href="#">슬림라이트</a></li>
+                        <li><a href="#">골드프로테이크</a></li>
+                        <li><a href="#">닥터코치 프로그램</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>고객 서비스</h3>
+                    <h3>지원</h3>
                     <ul>
                         <li><a href="#">자주 묻는 질문</a></li>
-                        <li><a href="#">배송 안내</a></li>
-                        <li><a href="#">교환 & 반품</a></li>
-                        <li><a href="#">건강 상담</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">1:1 상담</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>회사 정보</h3>
                     <ul>
-                        <li><a href="#">회사 소개</a></li>
-                        <li><a href="#">채용 정보</a></li>
+                        <li><a href="#">서울대 가정의학과</a></li>
                         <li><a href="#">개인정보처리방침</a></li>
                         <li><a href="#">이용약관</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 헬스케어 스토어. All rights reserved.</p>
+                <p>&copy; 2024 닥터코치. 서울대 가정의학과 전문의와 함께합니다.</p>
             </div>
         </div>
     </footer>
-
-    <!-- 장바구니 모달 -->
-    <div id="cartModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>장바구니</h2>
-                <span class="close">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div id="cartItems"></div>
-                <div class="cart-total">
-                    <h3>총 금액: <span id="cartTotal">0</span>원</h3>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" onclick="closeCart()">계속 쇼핑</button>
-                <button class="btn btn-primary">주문하기</button>
-            </div>
-        </div>
-    </div>
 
     <script src="js/utils.js"></script>
     <script src="js/main.js"></script>

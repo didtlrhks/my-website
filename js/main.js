@@ -137,9 +137,11 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeApp() {
     products = [...productData];
     renderProducts();
+    renderReviews();
     setupEventListeners();
     updateCartCount();
     setupScrollAnimations();
+    startCountdownTimer();
 }
 
 // 이벤트 리스너 설정
@@ -214,6 +216,18 @@ function setupEventListeners() {
         contactForm.addEventListener('submit', handleContactForm);
     }
 
+    // PDF 폼 제출
+    const pdfForm = document.getElementById('pdfForm');
+    if (pdfForm) {
+        pdfForm.addEventListener('submit', handlePdfForm);
+    }
+
+    // 리뷰 폼 제출
+    const reviewForm = document.getElementById('reviewForm');
+    if (reviewForm) {
+        reviewForm.addEventListener('submit', handleReviewForm);
+    }
+
     // 부드러운 스크롤
     const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
     navLinks.forEach(link => {
@@ -234,15 +248,40 @@ function setupEventListeners() {
     const heroButtons = document.querySelectorAll('.hero-buttons .btn');
     heroButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            if (this.textContent.includes('제품')) {
+            if (this.textContent.includes('상담')) {
+                requestConsultation();
+            } else if (this.textContent.includes('어떻게')) {
+                document.getElementById('how-it-works').scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            } else if (this.textContent.includes('제품')) {
                 document.getElementById('products').scrollIntoView({ 
                     behavior: 'smooth' 
                 });
-            } else {
-                document.getElementById('contact').scrollIntoView({ 
+            }
+        });
+    });
+
+    // CTA 버튼
+    const ctaButtons = document.querySelectorAll('.cta-buttons .btn');
+    ctaButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (this.textContent.includes('상담')) {
+                requestConsultation();
+            } else if (this.textContent.includes('제품')) {
+                document.getElementById('products').scrollIntoView({ 
                     behavior: 'smooth' 
                 });
             }
+        });
+    });
+
+    // 다운로드 버튼
+    const downloadButtons = document.querySelectorAll('.download-btn');
+    downloadButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            downloadDoctorCoach();
         });
     });
 }
@@ -593,6 +632,205 @@ function sortProducts(sortBy) {
     }
     
     renderProducts(sortedProducts);
+}
+
+// 카운트다운 타이머 시작
+function startCountdownTimer() {
+    // 3일 후 종료로 설정
+    const endTime = new Date().getTime() + (3 * 24 * 60 * 60 * 1000);
+    
+    function updateTimer() {
+        const now = new Date().getTime();
+        const distance = endTime - now;
+        
+        if (distance < 0) {
+            // 타이머 종료
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
+            return;
+        }
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+    
+    updateTimer();
+    setInterval(updateTimer, 1000);
+}
+
+// 제품 상세 페이지로 이동
+function goToProduct(productType) {
+    if (productType === 'goldproteak') {
+        window.open('https://bionutrion.imweb.me/?idx=14', '_blank');
+    } else if (productType === 'slimlight') {
+        window.open('https://bionutrion.imweb.me/?idx=13', '_blank');
+    }
+}
+
+// 무료 상담 받기
+function requestConsultation() {
+    showNotification('무료 상담 신청이 완료되었습니다! 24시간 내에 연락드리겠습니다.');
+}
+
+// 닥터코치 다운로드
+function downloadDoctorCoach() {
+    showNotification('닥터코치 앱 다운로드 페이지로 이동합니다.');
+    // 실제로는 앱스토어로 이동
+}
+
+// 리뷰 데이터
+const reviewsData = [
+    {
+        id: 1,
+        nickname: '김**',
+        rating: 5,
+        product: '골드프로테이크',
+        content: '정말 효과가 좋아요! 운동 후 복용하니 근육 회복이 빨라진 것 같습니다. 맛도 좋고 용해도도 빠르네요.',
+        date: '2024-01-15',
+        verified: true
+    },
+    {
+        id: 2,
+        nickname: '이**',
+        rating: 5,
+        product: '슬림라이트',
+        content: '다이어트 중인데 정말 도움이 됩니다. 식욕 억제 효과가 있어서 체중 감량에 성공했어요!',
+        date: '2024-01-14',
+        verified: true
+    },
+    {
+        id: 3,
+        nickname: '박**',
+        rating: 4,
+        product: '골드프로테이크',
+        content: '단백질 함량이 높아서 만족합니다. 가격 대비 품질이 좋은 것 같아요.',
+        date: '2024-01-13',
+        verified: false
+    },
+    {
+        id: 4,
+        nickname: '최**',
+        rating: 5,
+        product: '슬림라이트',
+        content: '자연 성분이라 안심하고 먹을 수 있어요. 부작용도 전혀 없고 효과도 좋습니다.',
+        date: '2024-01-12',
+        verified: true
+    },
+    {
+        id: 5,
+        nickname: '정**',
+        rating: 4,
+        product: '종합비타민',
+        content: '하루 한 알씩 먹고 있는데 컨디션이 좋아진 것 같아요. 꾸준히 먹어야겠습니다.',
+        date: '2024-01-11',
+        verified: false
+    },
+    {
+        id: 6,
+        nickname: '한**',
+        rating: 5,
+        product: '오메가3',
+        content: '뇌 건강에 좋다고 해서 먹기 시작했는데 집중력이 향상된 것 같아요. 추천합니다!',
+        date: '2024-01-10',
+        verified: true
+    }
+];
+
+// 리뷰 렌더링
+function renderReviews() {
+    const reviewsGrid = document.getElementById('reviewsGrid');
+    if (!reviewsGrid) return;
+    
+    reviewsGrid.innerHTML = '';
+    
+    reviewsData.forEach(review => {
+        const reviewCard = createReviewCard(review);
+        reviewsGrid.appendChild(reviewCard);
+    });
+}
+
+// 리뷰 카드 생성
+function createReviewCard(review) {
+    const card = document.createElement('div');
+    card.className = 'review-card';
+    
+    const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+    
+    card.innerHTML = `
+        <div class="review-header">
+            <div class="reviewer-info">
+                <div class="reviewer-avatar">${review.nickname.charAt(0)}</div>
+                <div>
+                    <div class="reviewer-name">${review.nickname}</div>
+                    ${review.verified ? '<span style="color: #4CAF50; font-size: 0.8rem;">✓ 구매인증</span>' : ''}
+                </div>
+            </div>
+            <div class="review-rating">${stars}</div>
+        </div>
+        <div class="review-content">${review.content}</div>
+        <div class="review-meta">
+            <span class="review-product">${review.product}</span>
+            <span>${review.date}</span>
+        </div>
+    `;
+    
+    return card;
+}
+
+// 리뷰 폼 처리
+function handleReviewForm(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(e.target);
+    const reviewData = {
+        nickname: formData.get('nickname'),
+        rating: parseInt(formData.get('rating')),
+        product: formData.get('product'),
+        content: formData.get('content'),
+        date: new Date().toISOString().split('T')[0],
+        verified: false
+    };
+    
+    // 리뷰 추가
+    reviewsData.unshift({
+        id: reviewsData.length + 1,
+        ...reviewData
+    });
+    
+    // 리뷰 다시 렌더링
+    renderReviews();
+    
+    // 폼 초기화
+    e.target.reset();
+    
+    showNotification('리뷰가 성공적으로 등록되었습니다. 감사합니다!');
+}
+
+// PDF 폼 처리
+function handlePdfForm(e) {
+    e.preventDefault();
+    
+    const email = e.target.querySelector('input[type="email"]').value;
+    
+    if (!ValidationUtils.isValidEmail(email)) {
+        showNotification('올바른 이메일 주소를 입력해주세요.');
+        return;
+    }
+    
+    // 실제로는 서버로 이메일을 전송하고 PDF를 발송
+    console.log('PDF 요청 이메일:', email);
+    
+    showNotification('PDF가 이메일로 발송되었습니다. 잠시 후 확인해주세요!');
+    e.target.reset();
 }
 
 // CSS 애니메이션 추가
